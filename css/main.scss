@@ -225,6 +225,7 @@ li {
   width: 80%;
   max-width: 1280px;
   margin: 0 auto;
+  flex-direction: column;
 }
 
 $i: 1;
@@ -242,52 +243,22 @@ $i: 1;
 
   $i: $i + 1;
 }
-    .menu {
-      position: relative;
-    }
-
-    .menu-content {
+@media(max-width:1567px) and (min-width:553px){
+  a{
    display: none;
-  background-color: #121213;
-  padding: 10px 16px;
-  border-radius: 8px;
-  width: 80px;
-  height: 140px;
-  color: white;
-  position: absolute;
-  right: 10px;
-  top: -160px;
-    }
-
-    .menu:hover  {
-      .menu-content {
-      display: block;
-      margin-top: 200px;
-      }
-    }
-
-    .menu-content  {
-      a {
-      display: block;
-      text-decoration: none;
-      color: white;
-      text-align: center;
-      padding-top: 20px;
-      }
-    }
-
-    .menu-content  {
-      a:hover{
-      color: rgb(202, 202, 202);
-      }
+  }
     }
     @media(max-width:1568px){
       .none, .btn{
         display: none;
       }
+  
     }
     @media(min-width:1568px){
       .grid{
+        display: none;
+      }
+          .menu-item a{
         display: none;
       }
     }
@@ -296,16 +267,14 @@ $i: 1;
         display: grid;
         grid-template-columns: 20px ;
       }
-      .menu-item{
-        display: flex;
-      }
+
       .menu-item{
         a{
           margin-left: 15px;
         }
       }
           .menu-content {
-   display: none;
+  
   background-color: #121213;
   padding: 10px 16px;
   border-radius: 8px;
@@ -323,5 +292,5 @@ padding-bottom: 40px;
     .a-content{
 justify-content: space-between;
    margin-top: 100px;
-
+   margin-left: 60px;
     }
