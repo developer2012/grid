@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Color+Emoji&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>uyga vazifalar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-black text-white font-sans">
 
+  <!-- Bu joyni JS orqali ko‘rsatamiz -->
+  <div id="content" class="pt-6 flex flex-col items-start gap-4 px-6"></div>
 
+  <script>
+    let yosh = Number(prompt("Yoshingizni kiriting:"));
+    const content = document.getElementById("content");
 
-
-    <a href="/index-homework.html" class="sayt">Homework-1/a> 
-
-
-  
-    <a href="/homework.html" class="sayt">Homework-2</a>
+    if (yosh < 18) {
+      content.innerHTML = `
+        <div class='bg-red-700 p-4 rounded-md text-center w-full'>
+          ⛔ <strong>Kirish taqiqlangan:</strong> 18 yoshdan kichiksiz
+        </div>
+      `;
+    } else {
+      content.innerHTML = `
+        <div class='mb-6 text-green-400 text-lg font-semibold'>✅ Xush kelibsiz! Sizga ruxsat berildi.</div>
+        <a href="/index-homework.html" class="text-white text-[20px] bg-blue-600 hover:bg-blue-800 px-4 py-2 rounded-md inline-block">Homework-1</a>
+        <a href="/homework.html" class="text-white text-[20px] bg-green-600 hover:bg-green-800 px-4 py-2 rounded-md inline-block">Homework-2</a>
+      `;
+    }
+  </script>
 </body>
-
 </html>
-
